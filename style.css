@@ -1,0 +1,497 @@
+/* entire css explanation is here */
+
+  /* lets do css reset as shown*/
+ /* so since container wraps all the content, we assign almost full width so give 90% width and do margin auto */
+ 
+ /* we set 1100 px as max width so clearly we can see the container takes 90% width upto max width of 1100px beyond that it will get streched*/
+
+
+
+ /* first of all to get all the items in navbar from left to right we set display as flex and so all 3 items insicde the navbar that is logo , ul and the right-menu come beside each other, note that the li items inside ul will not come beside each other.*/
+ 
+
+ /* to get space between all 3 items of the navbar we set justify content as space between as shown and we can see there is now equal space between all 3 items of navbar */
+
+/* now lets also make all li items from left to right */
+
+/* now we want to push all nav items near the logo and so we grab the class of the entire ul and set flex as 1 and add some margin left as it overlaps logo. */
+
+
+
+
+    /* We want to have some space between the hovered line and the list items so add some padding */
+
+    
+    /* styling header part */
+    
+
+      /* now we wanna give the showxase 100% width that is 100% width of its parent class container and set 400px as height.*/
+   
+      /* add the background of showcase area and also add required background properties. */
+   
+      /* now we want img as it is and want to bring the h2 tag,p tag and button part at centre bottom of showcase area, so first set display flex so they come beside each other and then set flex direction column so then align items centre brings all stuff at centre and then */
+      /* now all have come to centre and is at top of showcase area so now we do justify content as flex end and this will put all 3 stuff at end of showcase area that is as it was bought at top centre now setting flex end will bring them at bottom centre. */
+
+      /* to get all 4 cards in a single row that is to create 4 columns we will add grid template column as shown and apply 1fr space to each card as shown, that is repeat 4 times, 1fr.*/
+
+/* add some gap between cards */
+
+
+/* clearly images are going out of the container, and we need to restrict their width to be 100% of their container which is div of that img. So now at any width of the browser, all 4 images will appear fully in a row*/
+
+
+
+
+
+ /* as usalu we want xbox to occupy 100% width of our container which has width of 90pc and add height of 350px to xbox*/
+ 
+    /* add background image to entire xbox*/
+
+/*xbox section done*/
+
+
+/* styling the carbon area that has content related to carbon and it has similar look as of xbox area. */
+
+/* now since background of this carbon part is bit dark so we wanna make the colors of text part in it as white so we add dark class along with carbon class to this section in the html and say that whenever there is a dark class make color as white as shown */
+
+
+/* style follow social media section */
+
+/* so we want some spacing between all icons and text so take follow class and then to take everything within it we use * symbol as shown and gove margin right*/
+
+
+/* style links part */
+
+    /* clearly links-inner class has all ul's present so if we set display grid in links-iiner class then the ul's will be its grid items */
+
+
+    /* first set a max width to it as we dont want the content to go all way out so have max width same as container above.  */
+
+
+
+
+    
+
+/* styling the carbon area that has content related to carbon and it has similar look as of xbox area. */
+
+
+/* now since background of this carbon part is bit dark so we wanna make the colors of text part in it as white so we add dark class along with carbon class to this section in the html and say that whenever there is a dark class make color as white as shown */
+
+/* so we want some spacing between all icons and text so take follow class and then to take everything within it we use * symbol as shown and gove margin right*/
+
+
+
+
+@media(max-width:700px){
+    .menu-btn {
+        display: block;
+    }
+    /* lets start with home cards as its easy, now for 700px and less we want to change current 4 columns to 2 columns and thats what we do */
+    .home-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+/*now we want to remove the  paragraph in the xbox area in this small width as para is not looking good.*/
+.xbox .content p {
+    display: none;
+}
+.xbox .content h2{
+    margin-bottom: 20px;
+}
+/* now in the carbon area we have similar problem the text does not look good, instead of taking out para this time we just want to strech it out further at centre and since we gave content width as 55% initially now we will give 85% width that is 85% width of screen size.*/
+.carbon .content {
+    width: 85%;
+}
+.links .links-inner{
+    grid-template-columns: repeat(2,1fr);
+}
+/* now we dont want all nav items to be displayed at such width so make their display block so all come from top to bottom individually in a single line then make position absolute so they come out of their own relative flow and set them to top left and then add a background color to just see how much is thuis ul streched */
+.main-nav ul.main-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+    /* now we give 50% width because thats what we want that in on click of hamburger this much menu must come out  */
+    width: 50%;
+    /* and we want that full height of menu must come out so giving height 100% is must. */
+    height: 100%;
+    /* some space is left between left part of screen and the nav items and so we want to shift nav items to left and we will have to use transform property for that and translate it left(so use negative) by some distanece say 20px*/
+    /* transform: translateX(-20px); */
+    /* but now put this deaigned part inside and so adding huge translateX value as shown */
+    transform: translateX(-500x);
+    /* add transition and we will add it to transform property as transform propertyis making the menu come in and out on our click and give time and ease-in-out */
+    transition: transform 0.5s ease-in-out;
+    border-radius: #ccc 1px solid;
+    opacity: 0.9;
+    padding: 30px;
+}
+/* so what we wanna do is add class show which we will toggle on clickingv the ham button, and when that button is clicked this calss of show will make the translation of -500px which we have set initially to -20px which we want */
+.main-nav ul.main-menu .show{
+    transform: translateX(-20x);
+}
+.main-nav ul.main-menu li{
+    padding: 10px;
+    font-size: 14px;
+}
+}
+
+
+@media(max-width:500px){
+    /* lets start with home cards as its easy, now for 700px and less we want to change current 4 columns to 1 columns and thats what we do , we dont need repeat now  as we want only 1fr unit.*/
+    .home-cards{
+        grid-template-columns: 1fr;
+    }
+    .links .links-inner{
+        grid-template-columns: 1fr;
+    }
+    .links .links-inner ul {
+        margin-bottom: 20px;
+    }
+}
+/* Style hamburger menu */
+
+.menu-btn{
+    /* after setting position absolute we can see that the icon goes out of flow and gets postion absolte in top corner*/
+    cursor: pointer;
+position: absolute;
+/* lets move it to top right */
+top: 20px;
+right: 30px;
+/* set z index so that its always on top */
+z-index: 2;
+/* we dont want to display the icon on large screen so set display to none */
+display: none;
+
+}
+
+
+
+
+/* THE REAL FULL CODE STARTS */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Nav */
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+  }
+  
+  .main-nav .logo {
+    width: 110px;
+  }
+  
+  .main-nav ul {
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    padding: 0 10px;
+  }
+  
+  .main-nav ul li a {
+    padding-bottom: 2px;
+  }
+  
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+  }
+  
+  .main-nav ul.main-menu {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+  }
+  
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .dark {
+    color: #fff;
+  }
+  
+  .dark .btn {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Showcase */
+  .showcase {
+    width: 100%;
+    height: 400px;
+    background: url('https://i.ibb.co/zGSDGCL/slide1.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .showcase h2, .showcase p {
+    margin-bottom: 10px;
+  }
+  
+  .showcase .btn {
+    margin-top: 20px;
+  }
+  
+  /* Home cards */
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .home-cards img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .home-cards h3 {
+    margin-bottom: 5px;
+  }
+  
+  .home-cards a {
+    display: inline-block;
+    padding-top: 10px;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .home-cards a:hover i {
+    margin-left: 10px;
+  }
+  
+  /* Xbox */
+  .xbox {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
+  }
+  
+  .xbox .content {
+    width: 40%;
+    padding: 50px 0 0 30px;
+  }
+  
+  .xbox p, .carbon p {
+    margin: 10px 0 20px;
+  }
+  
+  /* Carbon */
+  .carbon {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
+  }
+  
+  .carbon .content {
+    width: 55%;
+    padding: 100px 0 0 30px;
+  }
+  
+  /* Follow */
+  .follow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 30px;
+  }
+  
+  .follow * {
+    margin-right: 10px;
+  }
+  
+  /* Links */
+  .links {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+  }
+  
+  .links-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .links li {
+    line-height: 2.8;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+  }
+  
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer div i {
+    margin-right: 10px;
+  }
+  
+  .footer ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer li {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  
+  @media(max-width: 700px) {
+    .menu-btn {
+      display: block;
+    }
+  
+    .menu-btn:hover {
+      opacity: 0.5;
+    }
+  
+    .main-nav ul.right-menu {
+      margin-right: 50px;
+    }
+  
+    .main-nav ul.main-menu {
+      display: block;
+      position: absolute;
+      top:0;
+      left: 0;
+      background: #f2f2f2;
+      width: 50%;
+      height: 100%;
+      border-right: #ccc 1px solid;
+      opacity: 0.9;
+      padding: 30px;
+      transform: translateX(-500px);
+      transition: transform 0.5s ease-in-out;
+    }
+  
+    .main-nav ul.main-menu li {
+      padding: 10px;
+      border-bottom: #ccc solid 1px;
+      font-size: 14px;
+    }
+  
+    .main-nav ul.main-menu li:last-child {
+      border-bottom: 0;
+    }
+  
+    .main-nav ul.main-menu.show {
+      transform: translateX(-20px);
+    }
+  
+    .home-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .xbox .content p {
+      display: none;
+    }
+  
+    .xbox .content h2 {
+      margin-bottom: 20px;
+    }
+  
+    .carbon .content {
+      width: 85%;
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media(max-width: 500px) {
+    .home-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .links .links-inner {
+      grid-template-columns: 1fr;
+    }
+  
+    .links .links-inner ul {
+      margin-bottom: 20px;
+    }
+  }
