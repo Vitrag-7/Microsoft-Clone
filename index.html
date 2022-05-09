@@ -1,0 +1,230 @@
+<!-- so we will be building microsoft clone now  and in this clone we will use concepts like CSS grid, flexbox and mediaqueries and we will also make it reposnive as well.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Clone</title>
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- link the css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- lets add the hamburger menu here above the container and when we put the icon it will come at top left of page by default at regular flow of the page, so go to css now for positioning-->
+    <div class="menu-btn">
+<i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="container">
+      <!-- lets create a navbar and give it a class and in this navbar we have logo at left then main menu in the middle and side menu at right with search icon and cart icon. and so we create img tag for logo then the ul for main menu and then a ul for right menu and give respective classes. We will import icons from fontawesome. lets now go to css and start styling the navbar. -->
+      <nav class="main-nav">
+        <img src="img/logo.png" alt="" class="logo" />
+
+        <ul class="main-menu show">
+          <li><a href="#">Office</a></li>
+          <li><a href="#">Windows</a></li>
+          <li><a href="#">Surface</a></li>
+          <li><a href="#">Xbox</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+        <ul class="right-menu">
+          <li>
+            <a href="">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--Lets build the showcase area in the container now, so first make header with class showcase and in that add h2 heading and some p tag based text and then add a button which says shop now and so we use a tag for that button as shown and also we want to add a right ward arrow icon and so we we add some fontawesome icon as shown -->
+
+      <header class="showcase">
+        <h2>Surface Deals</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa.</p>
+        <a href="#" class="btn"
+          >Shop Now <i class="fas fa-chevron-right"></i>
+        </a>
+      </header>
+
+      <!-- now we will create the cards section and since we have 2 card sections we create 2 cards section as shown -->
+
+      <!-- Home Cards 1 -->
+      <section class="home-cards">
+        <!-- now we create a div that will have img and and as this home-cards class has the divs which contain images,so we will set this home-cards class as display grid later. After creating first div just copy paste it 3 more times so we have 4 cards-->
+        <div>
+          <img src="img/card1.png" alt="" />
+          <h3>New Surface Pro 7</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card2.png" alt="" />
+          <h3>New Surface Laptop 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card3.png" alt="" />
+          <h3>Fire Controller</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card4.png" alt="" />
+          <h3>Microsoft Edge</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </section>
+
+      <!-- now we wanna create the XBOX area -->
+
+    <section class="xbox">
+        <div class="content">
+            <h2>Xbox Game Pass Ultimate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quibusdam sunt qui sed inventore facere voluptates doloribus. Magni, harum maxime.</p>
+            <a href="" class="btn">Join Now  <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+    <!-- Now we again have similar cards section we created before. So copy relevent code and just change the images now -->
+
+
+
+     <!-- Home Cards 2 -->
+     <section class="home-cards">
+        <!-- now we create a div that will have img and and as this home-cards class has the divs which contain images,so we will set this home-cards class as display grid later. After creating first div just copy paste it 3 more times so we have 4 cards-->
+        <div>
+          <img src="img/card5.png" alt="" />
+          <h3>New Surface Pro 7</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card2.png" alt="" />
+          <h3>New Surface Laptop 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card7.png" alt="" />
+          <h3>Fire Controller</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div>
+          <img src="img/card8.png" alt="" />
+          <h3>Microsoft Edge</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <a href="">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </section>
+<!-- Carbon area similar to xbox area
+ -->
+ <section class="carbon dark">
+     <div class="content">
+         <h2>Committing to carbon Negative</h2>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, ex id quidem rerum inventore dolor dolorum consequatur.</p>
+         <a href="" class="btn">Learn More</a>
+    </div>
+
+
+ </section>
+
+ <!-- create the foloow social media area -->
+ <section class="follow">
+     <p>Follow Microsoft</p>
+     <a href=""><img src="img/social-fb.png" alt=""></a>
+     <a href=""><img src="img/social-twitter.png" alt=""></a>
+     <a href=""><img src="img/social-linkedin.png" alt=""></a>
+ </section>
+    </div>
+
+    <!-- now for footer we want to go out of container because we want the back color of this links part to extend fully in website but if we create this links part inside the contaoner since it has 90% width the back color will get upto that 90% width only.-->
+
+     <!-- links in footer -->
+ <section class="links"> 
+     <div class="links-inner">
+        <ul>
+            <li>Whats New</li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Surface</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+          <ul>
+            <li><h3>Microsoft Store</h3></li>
+            <li><a href="#">Account Profile</a></li>
+            <li><a href="#">Download Center</a></li>
+            <li><a href="#">Microsoft Store support</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Older tracking</a></li>
+          </ul>
+          <ul>
+            <li><h3>Education</h3></li>
+            <li><a href="#">Microsfot in education</a></li>
+            <li><a href="#">Office for students</a></li>
+            <li><a href="#">Office 365 for schools</a></li>
+            <li><a href="#">Deals for studentss</a></li>
+            <li><a href="#">Microsfot Azure</a></li>
+          </ul>
+          <ul>
+            <li><h3>Enterprise</h3></li>
+            <li><a href="#">Azure</a></li>
+            <li><a href="#">AppSource</a></li>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Government</a></li>
+            <li><a href="#">Healthcare</a></li>
+          </ul>
+          <ul>
+            <li><h3>Developer</h3></li>
+            <li><a href="#">Visual Studio</a></li>
+            <li><a href="#">Windowszs Dev Center</a></li>
+            <li><a href="#">Developer Network</a></li>
+            <li><a href="#">TechNet</a></li>
+            <li><a href="#">Microsoft Developer</a></li>
+          </ul>
+          <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Microsoft</a></li>
+            <li><a href="#">Company news</a></li>
+            <li><a href="#">Privacy at Microsoft</a></li>
+            <li><a href="#">Inverstors</a></li>
+          </ul>
+     </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i>English</div>
+        <ul>
+            <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Contact Microsoft</a></li>
+          <li><a href="#">Privacy & cookies</a></li>
+          <li><a href="#">Terms of use</a></li>
+          <li><a href="#">Trademarks</a></li>
+          <li><a href="#">Safety & eco</a></li>
+          <li><a href="#">About our ads</a></li>
+          <li><a href="#">&copy; Microsoft 2020</a></li>
+          </ul>
+    </div>
+</footer>
+
+    <script>
+      document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'))
+    </script>
+  </body>
+</html>
